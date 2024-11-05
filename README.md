@@ -1,9 +1,6 @@
 # STAT3013.-P11
 <div align="right">
-## Team Member
-- Nguyễn An Đức 22520268
-- Ngô Hoàng Phương Khanh 22520639
-- Nguyễn Thị Xuân Quỳnh 22521234
+
   
 [1]: https://github.com/NguyenDuc061104/STAT3013.-P11
 
