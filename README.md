@@ -4,12 +4,6 @@
   
 [1]: https://github.com/NguyenDuc061104/STAT3013.-P11
 
-
-[![github](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/c292abd3f9cc647a7edc0061193f1523e9c05e1f/icons/git.svg)][1]
-[![linkedin](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/9f5c4a255972275ced549ea6e34ef35019166944/icons/iconmonstr-linkedin-5.svg)][2]
-[![tableau](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/e257c5d6cf02f13072429935b0828525c601414f/icons/icons8-tableau-software%20(1).svg)][3]
-[![twitter](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/c9f9c5dc4e24eff0143b3056708d24650cbccdde/icons/iconmonstr-twitter-5.svg)][4]
-
 </div>
 
 
@@ -113,43 +107,6 @@ To detect early signs of potential churn, one must first develop a holistic view
 ## Machine Learning Model Evaluations and Predictions:
 ![ML Algorithms](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/Model%20evaluation.PNG?raw=true)
 
-#### Results after K fold cross validation:
-
-![Logistic Regression](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/LR.PNG?raw=true) 
-![KNN](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/KNN.PNG?raw=true)
-![Naive Bayes](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/Naive%20Bayes.PNG?raw=true)
-![Decision Tree](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/Decision%20trees.PNG?raw=true)
-![Random Forest](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/Random%20Forest.PNG?raw=true)
-![Adaboost](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/Adaboost.PNG?raw=true)
-![Gradient Boost](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/Gradient%20boost.PNG?raw=true)
-![Voting Classifier](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/Voting%20Classifier.PNG?raw=true)
-
-![Confusion Matrix](https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/confusion_matrix_models.PNG?raw=true)
-#### Final Model: Voting Classifier
-* We have selected Gradient boosting, Logistic Regression, and Adaboost for our Voting Classifier.
-```
-    from sklearn.ensemble import VotingClassifier
-    clf1 = GradientBoostingClassifier()
-    clf2 = LogisticRegression()
-    clf3 = AdaBoostClassifier()
-    eclf1 = VotingClassifier(estimators=[('gbc', clf1), ('lr', clf2), ('abc', clf3)], voting='soft')
-    eclf1.fit(X_train, y_train)
-    predictions = eclf1.predict(X_test)
-    print("Final Accuracy Score ")
-    print(accuracy_score(y_test, predictions))
-```
-```
-Final Score 
-{'LogisticRegression': [0.841331397558646, 0.010495252078550477],
- 'KNeighborsClassifier': [0.7913242024807321, 0.008198993337848612],
- 'GaussianNB': [0.8232386881685605, 0.00741678015498337],
- 'DecisionTreeClassifier': [0.6470213137060805, 0.02196953973039052],
- 'RandomForestClassifier': [0.8197874155380965, 0.011556155864106703],
- 'AdaBoostClassifier': [0.8445838813774079, 0.01125665302188384],
- 'GradientBoostingClassifier': [0.844630629931458, 0.010723107447558198],
- 'VotingClassifier': [0.8468096379573085, 0.010887508320460332]}
-
-```
 * Final confusion matrix we got:
 <img src= "https://github.com/Pradnya1208/Telecom-Customer-Churn-prediction/blob/main/output/confusion%20matrix.PNG?raw=true" width = "425" />
 
@@ -164,20 +121,6 @@ We could use Hyperparamete Tuning or Feature enginnering methods to improve the 
 If you have any feedback, please reach out at 22520268@gm.uit.edu.vn
 
 
-
-
-
-
-[1]: https://github.com/Pradnya1208
-[2]: https://www.linkedin.com/in/pradnya-patil-b049161ba/
-[3]: https://public.tableau.com/app/profile/pradnya.patil3254#!/
-[4]: https://twitter.com/Pradnya1208
-
-
-[![github](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/c292abd3f9cc647a7edc0061193f1523e9c05e1f/icons/git.svg)][1]
-[![linkedin](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/9f5c4a255972275ced549ea6e34ef35019166944/icons/iconmonstr-linkedin-5.svg)][2]
-[![tableau](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/e257c5d6cf02f13072429935b0828525c601414f/icons/icons8-tableau-software%20(1).svg)][3]
-[![twitter](https://raw.githubusercontent.com/Pradnya1208/Telecom-Customer-Churn-prediction/c9f9c5dc4e24eff0143b3056708d24650cbccdde/icons/iconmonstr-twitter-5.svg)][4]
 
 
 
